@@ -1,11 +1,23 @@
 import React from "react";
 import restaurants from "../sample-restaurants";
 class Landing extends React.Component{
+    state={
+        display:false,
+        title:"",
+        url: ""
+    };
+
+displayList=()=> {
+   const {display}=this.state;
+   
+}
+
     render() {
         return(
        <div className="restaurant_select">
                 <div className="restaurant_select_top">
-                    <div className="restaurant_select_top-header">Выбери Ресторан</div>
+                    <div 
+                    onClick={this.displayList} className="restaurant_select_top-header">Выбери Ресторан</div>
 
                     <div className="arrow_picker">
                     <div className="arrow_picker-up"></div>
