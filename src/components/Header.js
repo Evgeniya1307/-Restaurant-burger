@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(){
+function Header(props){
     return(
         <header className="top">
                <div className="wrap">
@@ -11,7 +11,7 @@ function Header(){
                                <div className="header-rating_icon">★★★★★</div>
                        </div>
 <div className="header-divider"></div>
-<h1 className = "font-effect-fire-animation">{this.props.title}</h1>
+<h1 className = "font-effect-fire-animation">{props.title}</h1>
 <h3>
     <span>
         Быстрая доставка горячих
