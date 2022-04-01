@@ -45,7 +45,9 @@ getTitle=restaurant=> {
                 </ul>
             </div>
             ) :null}
-            <button>Перейти в ресторан</button>
+           {this.state.title&&!this.state.display?(
+               <button>Перейти в ресторан</button>
+           ):null}
             </div>
 
         
