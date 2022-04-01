@@ -33,20 +33,23 @@ getTitle=restaurant=> {
                 </div>
            
                
-           {this.state.display? (<div className="restaurant_select_bottom">
+           {this.state.display? (
+               <div className="restaurant_select_bottom">
            <ul>
            {restaurants.map(restaurant =>{
-           return <li onAuxClick={()=>this.getTitle(restaurant)}
+           return (
+               <li onAuxClick={()=>this.getTitle(restaurant)}
             key={restaurant.id}
             >
             {restaurant.title}
             </li> 
+           );
         })}
                 </ul>
             </div>
             ) :null}
            {this.state.title&&!this.state.display?(
-               <button>Перейти в ресторан</button>
+               <button onClick={this.goToRestaurant}>Перейти в ресторан</button>
            ):null}
             </div>
 
