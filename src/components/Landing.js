@@ -1,4 +1,5 @@
 import React from "react";
+import restaurants from "../sample-restaurants";
 class Landing extends React.Component{
     render() {
         return(
