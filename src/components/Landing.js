@@ -22,7 +22,9 @@ getTitle=restaurant=> {
        <div className="restaurant_select">
                 <div className="restaurant_select_top">
                     <div 
-                    onClick={this.displayList} className="restaurant_select_top-header">Выбери Ресторан</div>
+                    onClick={this.displayList} className="restaurant_select_top-header">
+                    {this.state.title?this.state.title: "Выбери Ресторан"}
+                    </div>
 
                     <div className="arrow_picker">
                     <div className="arrow_picker-up"></div>
