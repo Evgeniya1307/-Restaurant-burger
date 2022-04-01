@@ -17,6 +17,11 @@ getTitle=restaurant=> {
     this.setState({title,url,display:false});
 };
 
+goToRestaurant = ()=>{
+    console.log("go to restaraunt!")
+}
+
+
     render() {
         return(
        <div className="restaurant_select">
