@@ -16,7 +16,7 @@ class Landing extends React.Component{
            <div className="restaurant_select_bottom">
            <ul>
            {restaurants.map(restaurant =>{
-           return (restaurant.title)
+           return <li key={restaurant.id}>{restaurant.title}</li> 
         })}
                 </ul>
             </div>
