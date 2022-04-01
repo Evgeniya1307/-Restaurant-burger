@@ -2,6 +2,9 @@ import React from "react";
 import restaurants from "../sample-restaurants";
 class Landing extends React.Component{
     render() {
+        restaurants.map(restaurant =>{
+            console.log (restaurant.title)
+        })
         return(
        <div className="restaurant_select">
                 <div className="restaurant_select_top">
