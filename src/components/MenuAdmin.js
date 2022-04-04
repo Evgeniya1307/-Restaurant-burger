@@ -1,5 +1,5 @@
 import React from "react";
-
+import AddBurgerForm from "./AddBurgerForm";
 
 
 class MenuAdmin extends React.Component{
@@ -7,6 +7,7 @@ class MenuAdmin extends React.Component{
         return(
 <div className="menu-admin">
     <h2>Управление Меню</h2>
+    <AddBurgerForm/>
 </div>
         );
     }
