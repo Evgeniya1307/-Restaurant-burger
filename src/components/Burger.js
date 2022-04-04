@@ -4,8 +4,7 @@ import React from "react";
 
 class Burger extends React.Component {
     render(){
-        const image = this.props.details.image;
-        const name = this.props.details.name;
+        const {image,name}=this.props.details;
         return(
             <li className="menu-burger">
                 <div className="image-container">
