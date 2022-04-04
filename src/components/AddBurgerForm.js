@@ -11,10 +11,14 @@ class AddBurgerForm extends React.Component {
   
   createBurger=(event)=>{
     event.preventDefault();
-console.log("add burger!!!!", this.nameRef.current.value)
 const burger={
   name: this.nameRef.current.value,
-}
+ price: parseFloat (this.priceRef.current.value),
+  status: this.statusRef.current.value,
+  desc: this.descRef.current.value,
+ image: this.imageRef.current.value,
+};
+console.log(burger)
 };
   render() {
     return(
