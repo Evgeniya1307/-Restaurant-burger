@@ -18,9 +18,8 @@ getTitle=restaurant=> {
 };
 
 goToRestaurant = ()=>{
-    console.log("go to restaraunt!")
 const {url}= this.state;
-console.log(url);
+this.props.history.push(`/restaurant/${url}`)
 };
 
 
