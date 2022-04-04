@@ -3,6 +3,7 @@ import Header from "./Header";
 import Order from "./Order";
 import MenuAdmin from "./MenuAdmin";
 import  sampleBurgers from "../sample-burgers";
+import Burger from "./Burger";
 class App extends React.Component {
  state={
    burgers: {},
@@ -27,7 +28,11 @@ this.setState({burgers:sampleBurgers});
       <div className="burger-paradise">
         <div className="menu">
           <Header title="Hot Burger" />
-        <ul className="burgers"></ul>
+        <ul className="burgers">
+          {Object.keys(this.state.burgers).map(key=>{
+            return<li>key</li>
+          })}
+        </ul>
         </div>
         <Order />
         <MenuAdmin 
