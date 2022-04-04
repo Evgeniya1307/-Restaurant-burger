@@ -7,7 +7,7 @@ class MenuAdmin extends React.Component{
         return(
 <div className="menu-admin">
     <h2>Управление Меню</h2>
-    <AddBurgerForm/>
+    <AddBurgerForm addBurger={this.props.addBurger}/>
 </div>
         );
     }
