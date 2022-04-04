@@ -27,9 +27,11 @@ this.setState({burgers:sampleBurgers});
       <div className="burger-paradise">
         <div className="menu">
           <Header title="Hot Burger" />
+        <ul className="burgers"></ul>
         </div>
         <Order />
-        <MenuAdmin addBurger={this.addBurger}
+        <MenuAdmin 
+        addBurger={this.addBurger}
           LoadSampleBurgers={this.loadSampleBurgers}
         />
       </div>
