@@ -8,12 +8,15 @@ class Burger extends React.Component {
         return(
             <li className="menu-burger">
                 <div className="image-container">
-                    <img src={image}/>
+                    <img src={image} alt={name}/>
                 </div>
                 <div className="burger-details">
-                    <h3 className="burger-name">{name}
-
+                    <h3 className="burger-name">
+                    {name}
+                    <span className="price">{price}</span>
                     </h3>
+                    <p>{desc}</p>
+                <button className="buttonOrder">Заказать</button>
                 </div>
             </li>
         )
