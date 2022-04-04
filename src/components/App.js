@@ -4,6 +4,10 @@ import Order from "./Order";
 import MenuAdmin from "./MenuAdmin";
 
 class App extends React.Component {
+ state={
+   burgers: {},
+   order:{}
+ }
   render() {
     return (
       <div className="burger-paradise">
