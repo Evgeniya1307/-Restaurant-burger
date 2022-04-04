@@ -19,7 +19,7 @@ class App extends React.Component {
           <Header title="Hot Burger" />
         </div>
         <Order />
-        <MenuAdmin />
+        <MenuAdmin addBurger={this.addBurger}/>
       </div>
     );
   }
