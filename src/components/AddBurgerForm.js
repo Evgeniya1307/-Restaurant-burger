@@ -19,6 +19,7 @@ const burger={
  image: this.imageRef.current.value,
 };
 this.props.addBurger(burger);
+event.currentTarget.reset()
 };
   render() {
     return(
