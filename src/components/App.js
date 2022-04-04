@@ -8,6 +8,10 @@ class App extends React.Component {
    burgers: {},
    order:{}
  }
+
+ addBurger=(burger)=>{
+   console.log("addBurger",burger)
+ };
   render() {
     return (
       <div className="burger-paradise">
