@@ -18,7 +18,7 @@ const burger={
   desc: this.descRef.current.value,
  image: this.imageRef.current.value,
 };
-console.log(burger)
+this.props.addBurger(burger);
 };
   render() {
     return(
