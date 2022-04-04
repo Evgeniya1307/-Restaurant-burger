@@ -19,7 +19,9 @@ getTitle=restaurant=> {
 
 goToRestaurant = ()=>{
     console.log("go to restaraunt!")
-}
+const {url}= this.state;
+console.log(url);
+};
 
 
     render() {
