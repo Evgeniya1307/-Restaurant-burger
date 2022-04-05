@@ -19,7 +19,11 @@ render(){
             <div className="total_wrap">
             <div>
             <div>Доставка :{total > 0 ? shippingNeon : null}</div>
-                
+              <div   className="total_wrap_free">
+{total < 500
+? `Закажите ещё на ${500-total}₽ для доставки за 99 ₽`
+:null}
+              </div>
             </div>
                 <div className="total_wrap-final">Итого:{total}₽</div>
             </div>
@@ -30,5 +34,5 @@ render(){
 
 export default Shipment;
 
-
+//если total сумма заказа <500 ? `закажите ещё на ${500-total тут посчитали сколько осталось }₽ для доставки за 99 рублей и в противном случае : null `
 // если total сумма нашего заказа больше 0 то мы показываем shippingNeon в противном случае ничего в заказ не добавлено null
