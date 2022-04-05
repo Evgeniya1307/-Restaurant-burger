@@ -17,7 +17,9 @@ class Burger extends React.Component {
                     <span className="price">{price}₽</span>
                     </h3>
                     <p>{desc}</p>
-                <button className="buttonOrder">Заказать</button>
+                <button className="buttonOrder"
+                disabled={!isAvailable}
+                >Заказать</button>
                 </div>
             </li>
         )
