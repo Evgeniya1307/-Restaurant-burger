@@ -19,6 +19,7 @@ class Burger extends React.Component {
                     <p>{desc}</p>
                 <button className="buttonOrder"
                 disabled={!isAvailable}
+                onClick={this.handleClick}
                 >
                 {isAvailable ? "Заказать" : "Временно нет"}</button>
                 </div>
