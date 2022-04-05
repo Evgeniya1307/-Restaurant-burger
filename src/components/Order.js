@@ -3,7 +3,9 @@ import React from "react";
 
 
 class Order extends React.Component{
-   renderOrder =(key)
+   renderOrder =(key)=>{
+       return<li>{key}</li>;
+   }
    
     render(){
         const orderIds = Object.keys(this.props.order);
@@ -24,9 +26,7 @@ class Order extends React.Component{
             <div className="order-wrap">
              <h2>Ваш заказ</h2>   
              <ul className="order">
-             {orderIds.map(key=>{
-                 return <li>{key}</li>
-             })}
+             {orderIds.map(this.renderOrder)}
              </ul>
              {total}
             </div>
