@@ -5,7 +5,9 @@ import React from "react";
 class Order extends React.Component{
     render(){
         const orderIds = Object.keys(this.props.order);
-        const total =
+        const total = orderIds.reduce((prevTotal,key)=>{
+            
+        })
         
         return (
             <div className="order-wrap">
