@@ -25,6 +25,10 @@ console.log("Ready To Load!!!")
   this.setState({burgers:sampleBurgers});
 };
 
+addToOrder = (key)=> {
+  
+}
+
   render() {
     return (
     <div className="burger-paradise">
