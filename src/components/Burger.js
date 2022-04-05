@@ -4,7 +4,7 @@ import React from "react";
 
 class Burger extends React.Component {
 handleClick=()=>{
-    console.log(">>>>>",)
+    console.log(">>>>>", this.props.index)
 }
 
     render(){
