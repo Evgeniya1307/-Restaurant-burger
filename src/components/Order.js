@@ -8,6 +8,9 @@ class Order extends React.Component{
         return (
             <div className="order-wrap">
              <h2>Ваш заказ</h2>   
+             <ul className="order">{orderIds.map(key=>{
+                 return <li>{key}</li>
+             })}</ul>
             </div>
         )
     }
