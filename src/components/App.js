@@ -46,6 +46,7 @@ this.setState({order})
             <Burger 
             key={key}
               index={key}
+              addToOrder={this.addToOrder}
               details={this.state.burgers[key]}
             />
             );
