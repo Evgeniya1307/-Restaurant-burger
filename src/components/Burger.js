@@ -4,7 +4,7 @@ import React from "react";
 
 class Burger extends React.Component {
 handleClick=()=>{
-    console.log(">>>>>", this.props.index)
+this.props.addToOrder(this.props.index)
 }
 
     render(){
