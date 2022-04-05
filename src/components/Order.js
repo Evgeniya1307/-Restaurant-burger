@@ -17,6 +17,7 @@ class Order extends React.Component{
             <span>{count}</span>
        шт.{burger.name}
        <span>{count*burger.price}₽</span>
+        <button></button>
         </span>
     </li>;
    };
