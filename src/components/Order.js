@@ -17,11 +17,11 @@ class Order extends React.Component{
             <span>{count}</span>
        шт.{burger.name}
        <span>{count*burger.price}₽</span>
-        <button></button>
+        <button className="cancellItem">&times;</button>
         </span>
     </li>;
    };
-
+//&times знак html крестик красный можем кликать и убирать 
 
    
     render(){
