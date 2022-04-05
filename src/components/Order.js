@@ -48,11 +48,6 @@ class Order extends React.Component{
              <h2>Ваш заказ</h2>   
              <ul className="order">
              {orderIds.map(this.renderOrder)}</ul>
-          <div className="total">
-              <div className="total-wrap">
-                  <div className="total_wrap-final">Итого:{total}₽</div> 
-              </div>
-          </div>
             </div>
         )
     }
