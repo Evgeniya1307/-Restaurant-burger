@@ -8,7 +8,7 @@ class Order extends React.Component{
         const total = orderIds.reduce((prevTotal,key)=>{
             const burger = this.props.burgers[key];
             const count = this.props.order[key];
-        return prevTotal + burger.price*count
+        return prevTotal + burger.price*count;
         },0);
         
         return (
@@ -19,6 +19,7 @@ class Order extends React.Component{
                  return <li>{key}</li>
              })}
              </ul>
+             {total}
             </div>
         )
     }
