@@ -8,9 +8,8 @@ class Order extends React.Component{
         const total = orderIds.reduce((prevTotal,key)=>{
             const burger = this.props.burgers[key];
             const count = this.props.order[key];
-        console.log("burger>>",burger)
-        console.log("count>>>", count)
-        },0)
+        return prevTotal + burger.price*count
+        },0);
         
         return (
             <div className="order-wrap">
