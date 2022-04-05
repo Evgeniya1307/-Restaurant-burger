@@ -3,6 +3,10 @@ import React from "react";
 
 
 class Burger extends React.Component {
+handleClick=()=>{
+    console.log(">>>>>",)
+}
+
     render(){
         const {image,name, price, desc, status }=this.props.details;
         const isAvailable = status ==="available";
