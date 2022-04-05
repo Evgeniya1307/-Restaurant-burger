@@ -12,7 +12,13 @@ class Order extends React.Component{
             Извините,{burger? burger.name:"бургер"}временно недоступен 
         </li>//если есть бургер он не был удалён мы используем названи бургера если удалён используем слово бургер извините такой то бургер временно нендоступен 
     }
-    return<li>{key}</li>;
+    return<li>
+        <span>
+            <span>{count}</span>
+       шт.{burger.name}
+       <span>{count*burger.price}₽</span>
+        </span>
+    </li>;
    };
 
 
