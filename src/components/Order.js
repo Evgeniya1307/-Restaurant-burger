@@ -8,19 +8,23 @@ class Order extends React.Component{
     const count = this.props.order[key];
       const isAvailable=burger&&burger.status==="available";//создала переменную и проверку 
     if (!isAvailable){
-        return<li className="unavailable">
+        return( 
+        <li className="unavailable" key ={key}>
             Извините,{burger? burger.name:"бургер"}временно недоступен 
         </li>//если есть бургер он не был удалён мы используем названи бургера если удалён используем слово бургер извините такой то бургер временно нендоступен 
-    }
-    return<li>
+        );    
+}
+    return(
+    <li key ={key}>
         <span>
             <span>{count}</span>
        шт.{burger.name}
        <span>{count*burger.price}₽</span>
         <button className="cancellItem">&times;</button>
         </span>
-    </li>;
-   };
+    </li>
+   );
+};
 //&times знак html крестик красный можем кликать и убирать 
 
    
@@ -46,7 +50,7 @@ class Order extends React.Component{
              {orderIds.map(this.renderOrder)}</ul>
           <div className="total">
               <div className="total-wrap">
-                  <div className="total_wrap-final">Итого:{total}</div> 
+                  <div className="total_wrap-final">Итого:{total}₽</div> 
               </div>
           </div>
             </div>
