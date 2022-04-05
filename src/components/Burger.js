@@ -3,10 +3,6 @@ import React from "react";
 
 
 class Burger extends React.Component {
-handleClick=()=>{
-this.props.addToOrder(this.props.index)
-}
-
     render(){
         const {image,name, price, desc, status }=this.props.details;
         const isAvailable = status ==="available";
@@ -23,7 +19,7 @@ this.props.addToOrder(this.props.index)
                     <p>{desc}</p>
                 <button className="buttonOrder"
                 disabled={!isAvailable}
-                onClick={this.handleClick}
+                onClick={()=>this.props.addToOrder(this.props.index)}
                 >
                 {isAvailable ? "Заказать" : "Временно нет"}</button>
                 </div>
