@@ -1,5 +1,5 @@
 import React from "react";
-
+import Shipment from "./Shipment";
 
 
 class Order extends React.Component{
@@ -48,6 +48,14 @@ class Order extends React.Component{
              <h2>Ваш заказ</h2>   
              <ul className="order">
              {orderIds.map(this.renderOrder)}</ul>
+            {total>0?Order(
+                <Shipment total = {total}/>
+            ):(
+                <div className="nothingSelected">
+Выберите блюда и добавьте к заказу
+                </div>
+            
+            )}
             </div>
         )
     }
