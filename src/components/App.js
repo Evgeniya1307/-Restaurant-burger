@@ -24,7 +24,12 @@ class App extends React.Component {
  }
 
 
- 
+componentDidUpdate(){
+  const {params}=this.props.match;
+  console.log("UPDATED!!!");
+  localStorage.setItem(params.restarauntId)//используем sеtItem чтобы добавить нужные нам данные 1 это ключ это наш ресторан {params.restaurantId}
+}
+
 
  componentWillUnmount(){
    base.removeBinding(this.ref);
