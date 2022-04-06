@@ -2,6 +2,8 @@ import React from "react";
 import AddBurgerForm from "./AddBurgerForm";
 import EditBurgerForm from "./EditBurgerForm";
 import PropTypes from "prop-types";
+import firebase from "firebase/app";
+
 class MenuAdmin extends React.Component {
   state = {
     photo: '',

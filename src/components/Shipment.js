@@ -1,8 +1,12 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 
 class Shipment  extends React.Component{
-render(){
+    static propTypes = {
+        total: PropTypes.number
+      };
+
+    render(){
     const {total}=this.props;
     //создала переменную shipping(доставка) если сумма заказа выше 0 и в тоже самое время сум ма заказа м еньше 500 то стоимость доставки 350р в противном случае если сумма заказа больше 500 рублей то доставка 99 р
     const shipping = total > 0 && total < 500 ? 350 : 99;
