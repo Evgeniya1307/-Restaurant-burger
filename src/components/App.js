@@ -6,6 +6,7 @@ import sampleBurgers from "../sample-burgers";
 import Burger from "./Burger";
 import base from "../base";
 import PropTypes from "prop-types";
+import firebase from 'firebase/app';
 import SignIn from "./Auth/SignIn";
 class App extends React.Component {
   static propTypes = {
