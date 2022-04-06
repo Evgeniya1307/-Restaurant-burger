@@ -88,6 +88,7 @@ this.setState({order})
         <MenuAdmin 
         addBurger={this.addBurger}
         loadSampleBurgers={this.loadSampleBurgers}
+        burges={this.state.burgers}//передали все наши бургеры через создания своцйства burgers
         />
       </div>
     );
