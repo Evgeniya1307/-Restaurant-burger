@@ -14,10 +14,18 @@ class App extends React.Component {
  };
 
 
- componentDidMount(){
+ componentDidMount(){//здесь принимаем из базы данных наши бургеры записываем их в стейт в обьект бургерс обновляется стейт и ререндерится компонент обновляется с пустым обьектом ордер  
  const {params}=this.props.match;
-  this.ref = base.syncState(`${params.restarauntId}/burgers`,{
-    
+ 
+ const localStorageRef = localStorage.getItem(params.restarauntId)//чтобы получить данные из localStorage указываем какие данные хотим получить ()
+ console.log("localStorageRef", localStorageRef)
+ if(localStorageRef){
+  this.setState({order: JSON.parse(localStorageRef)})
+ }
+ 
+ 
+ 
+ this.ref = base.syncState(`${params.restarauntId}/burgers`,{
  context: this,
  state:"burgers"
 });
@@ -26,7 +34,6 @@ class App extends React.Component {
 
 componentDidUpdate(){
   const {params}=this.props.match;
-  console.log("UPDATED!!!");
   localStorage.setItem(params.restarauntId, JSON.stringify(this.state.order))//используем sеtItem чтобы добавить нужные нам данные 1 это ключ это наш ресторан {params.restaurantId}а в качестве значения места где хранятся наши заказы это this.state.order
 }
 

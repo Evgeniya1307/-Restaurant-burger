@@ -1,5 +1,6 @@
 import React from "react";
 import AddBurgerForm from "./AddBurgerForm";
+import EditBurgerForm from "./EditBurgerForm";
 
 class MenuAdmin extends React.Component {
   render() {
