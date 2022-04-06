@@ -8,3 +8,6 @@ const firebaseApp = firebase.initializeApp({
 });
 
 const base = Rebase .createClass(firebaseApp.database());// создали базу данных
+
+export {firebaseApp};
+export default base;

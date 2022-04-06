@@ -4,12 +4,31 @@ import Order from "./Order";
 import MenuAdmin from "./MenuAdmin";
 import  sampleBurgers from "../sample-burgers";
 import Burger from "./Burger";
+import base from "../base";
+
 
 class App extends React.Component {
  state={
    burgers: {},
    order:{}
  };
+
+
+ componentDidMount(){
+ const {params}=this.props.match;
+  this.ref = base.syncState(`${params.restarauntId}/burgers`,{
+    
+ context: this,
+ state:"burgers"
+});
+ }
+
+
+ 
+
+ componentWillUnmount(){
+   base.removeBinding(this.ref);
+ }
 
  addBurger= burger=> {
  //1.чтобы добавить в state наш бургер:делаем копию обьекта  state создаё1м новую переменную const  и используем оператор спрет ...this.state.burgers,теперь в этот обьект должны добавить наш новый обьект бургер:burgers[`burger`${Date.now(этот метод даёт уникальную метку милисекундах используем для нумерации наших бургеров для экономии времени)}]
