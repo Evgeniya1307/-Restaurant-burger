@@ -27,7 +27,7 @@ class App extends React.Component {
 componentDidUpdate(){
   const {params}=this.props.match;
   console.log("UPDATED!!!");
-  localStorage.setItem(params.restarauntId, this.state.order)//используем sеtItem чтобы добавить нужные нам данные 1 это ключ это наш ресторан {params.restaurantId}а в качестве значения места где хранятся наши заказы это this.state.order
+  localStorage.setItem(params.restarauntId, JSON.stringify(this.state.order))//используем sеtItem чтобы добавить нужные нам данные 1 это ключ это наш ресторан {params.restaurantId}а в качестве значения места где хранятся наши заказы это this.state.order
 }
 
 
