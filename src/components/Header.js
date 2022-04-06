@@ -1,4 +1,6 @@
 import React from "react";
+import propTypes from "prop-types";
+
 
 const  Header=props=>(
         <header className="top">
@@ -23,6 +25,10 @@ const  Header=props=>(
            </header>
         
     
-    )
+    );
+
+    Header.propTypes = {
+        title: propTypes.string
+    };
 
 export default Header;
