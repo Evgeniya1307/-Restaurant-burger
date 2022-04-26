@@ -10,7 +10,7 @@ class Burger extends React.Component {
           price: PropTypes.number,
           desc: PropTypes.string,
           status: PropTypes.string
-        }),
+        })
         index: PropTypes.string,
         addToOrder: PropTypes.func
       };
