@@ -264,7 +264,7 @@ header.top .header-content h3 {
   font-size: 2rem;
 }
 header.top .header-content .sub-header {
-  color: #f00;
+  color: rgb(223, 4, 4);
 }
 .burger-paradise {
   display: grid;
