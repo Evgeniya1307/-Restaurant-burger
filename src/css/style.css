@@ -227,7 +227,7 @@ h3 {
 header.top {
   background: url("images/burger-logo-4.jpg") center no-repeat;
   background-size: cover;
-  color: #fff;
+  color: rgb(241, 235, 235);
 }
 header.top .wrap {
   height: 100%;
